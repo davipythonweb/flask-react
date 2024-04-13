@@ -34,7 +34,7 @@ db.create_tables([Pessoa], safe=True)
 def index():
     return render_template('base.html')
 
-# Rota para processar os dados do formulário enviado pelo React
+# Rota para processar os dados do formulário enviado pelo React(API)
 @app.route('/adicionar_pessoa', methods=['POST'])
 def adicionar_pessoa():
     try:
@@ -67,4 +67,4 @@ def obter_pessoas():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
